@@ -9,11 +9,15 @@ print(list)
 
 # Menghitung Luas Bangun Datar
 
-pilihan = int(input (""" selamat datang di mari menghitung
-           1 Luas Persegi 
-           2 Luas Lingkaran
-           3 luas segitiga 
-           """))
+pilihan = int(input (
+"""
+==================================
+selamat datang di mari menghitung
+==================================
+1 Luas Persegi 
+2 Luas Lingkaran
+3 luas segitiga 
+apa yang ingin anda cari ? """))
 
 match pilihan :
     case 1 :
@@ -30,3 +34,6 @@ match pilihan :
         tinggi = int(input("masukkan tinggi "))
         total = 1/2 * alas * tinggi
         print ("luas Segitia adalah ", total)
+
+    case _ :
+        print ("gatau kenapa mas")
