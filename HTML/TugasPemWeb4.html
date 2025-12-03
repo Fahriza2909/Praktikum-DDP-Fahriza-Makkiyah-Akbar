@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>body {
+     font-family: 'Segoe UI', Arial, sans-serif;
+     margin: 0;
+     background-color: #fcfeff;
+     color: #222;
+ }
+
+ /* HEADER */
+ header {
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 20px 0;
+ }
+
+ header h1 {
+     margin: 0;
+     font-size: 28px;
+ }
+
+ /* NAV */
+ nav {
+     background-color: #4f90c6;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+     margin: 0 15px;
+     font-weight: bold;
+ }
+
+ nav a:hover {
+     text-decoration: underline;
+ }
+
+ /* LAYOUT */
+ .container {
+     width: 90%;
+     max-width: 1100px;
+     margin: 20px auto;
+     overflow: auto;
+ }
+
+ section {
+     float: left;
+     width: 68%;
+     background-color: white;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+ }
+
+ aside {
+     float: right;
+     width: 28%;
+     background-color: #cbdde9;
+     border: 1px solid #bbb;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+ }
+
+ h2 {
+     color: #355485;
+     margin-top: 0;
+ }
+
+ article img {
+     width: 100%;
+     border-radius: 6px;
+     margin-bottom: 10px;
+ }
+
+ /* TABEL DATA */
+ table {
+     border-collapse: collapse;
+     width: 100%;
+     margin: 12px 0;
+ }
+
+ th,
+ td {
+     border: 1px solid #ccc;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f1f5f9;
+ }
+
+ /* IFRAME */
+ iframe {
+     width: 100%;
+     height: 250px;
+     border: 1px solid #999;
+     border-radius: 6px;
+ }
+
+ /* FOOTER */
+ footer {
+     clear: both;
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 14px 0;
+     margin-top: 20px;
+ }
+
+ footer a {
+     color: #cbdde9;
+     text-decoration: none;
+ }
+
+ footer a:hover {
+     text-decoration: underline;
+ }
+
+ .tag {
+            display: inline-block;
+            background: #e0f2fe;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+ /* RESPONSIVE SEDIKIT */
+ @media (max-width: 768px) {
+
+     section,
+     aside {
+         float: none;
+         width: 100%;
+     }
+ }
+
+ </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Talk About Me 💻🌱
+        </h1>
+
+        <p>
+            Fahriza Makkiyah Akbar
+        </p>   
+    </header>
+    <nav>
+            <a href="About Me">
+                About Me
+            </a>
+            <a href="Fakta Unik">
+                Fakta Unik
+            </a>
+            <a href="Link Belajar Koding">
+                Link Belajar koding
+            </a>
+            <a href="Contact">
+                Contact
+            </a>
+    </nav>
+
+    <article>
+        <div class="container">
+            <section id="About Me">
+                <h2>Fahriza Makkiyah Akbar</h2>
+                <p>
+                    <img src="https://exampllee.vercel.app/assets/G07.gif">
+                    <br>
+                     Halo nama saya Fahriza Makkiyah Akbar, saya adalah <br>
+                     mahasiswa baru di stt Nurul Fikri, hobi saya bermain basket,<br>
+                     dan saya memiliki hobi baru yaitu ngoding😊😊
+                     <br>
+                     <p>
+                        <b>Fakta Tentang Diri Saya</b>
+                        <ul>
+                            <li>suka denger musik</li>
+                            <li>suka nonton film</li>
+                            <li>suka main basket</li>
+                            <li>suka sama dia</li>
+                        </ul>
+                    </p>
+
+                    <p> <b>Top 3 Pemain NBA</b>
+                        <ol>
+                            <li>Anthony Edwards</li>
+                            <li>Lebron James</li>
+                            <li>Kyrie Irving</li>
+                        </ol>
+                    </p>
+
+                    <p>
+                        <b>Daftar Harga Indomie</b>
+                        <table>
+                            <tr>
+                                <th>Rasa Indome</th>
+                                <th>Harga Indomie</th>
+                                <th>Rating</th>
+                            </tr>
+                            <tr>
+                                <td>Rendang</td>
+                                <td>3000</td>
+                                <td>10/10</td>
+                            </tr>
+                            <tr>
+                                <td>Bangladesh</td>
+                                <td>3000</td>
+                                <td>10/10</td>
+                            </tr>
+                            <tr>
+                                <td>Soto Spesial</td>
+                                <td>3000</td>
+                                <td>10/10</td>
+                            </tr>
+                        </table>
+
+                        <p>
+                            <b>Dan ini motto Hidup saya</b><br>
+                            <span class="tag">"Hidup Hanya Sekali Buat Berarti"</span>
+                        </p>
+                    </p>
+
+                     <p>
+                        <h2>Belajar HTML langsung dari sumber nya</h2>
+                            Berikut adalah tempat belajar ngoding : 
+                            <br>
+                        <iframe src="https://id.wikipedia.org/wiki/W3Schools"></iframe>
+                     </p>
+                </p>
+            </section>
+
+        <aside>
+            <h2>Fakta Unik Saya</h2>
+            <p>
+                <ul>
+                    <li>tidak bisa makan ikan</li>
+                    <li>tinggi 😎</li>
+                    <li>Pemalu</li>
+                </ul>
+            </p>
+
+            <p>
+                <b>Jadwal Harian</b>
+                <table>
+                    <tr>
+                                <th>Waktu</th>
+                                <th>Kegiatan</th>
+                    </tr>
+
+                    <tr>
+                                <td>08:00</td>
+                                <td>kuliah</td>
+                    </tr>
+                    <tr>
+                                <td>12:00</td>
+                                <td>PULANG</td>
+                    </tr>
+                </table>
+            </p>
+        </aside>
+        </div>
+    </article>
+
+<footer>
+    © Fahriza Makkiyah Akbar - CV ini dibuat dengan html, CSS, Internal,
+        dan layout float
+</footer>
+
+</body>
+</html>

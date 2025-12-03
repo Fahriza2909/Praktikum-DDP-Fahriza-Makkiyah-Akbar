@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Sederhana Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            color: #0f172a;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout menggunakan float */
+        main {
+            margin: 20px;
+            overflow: auto;
+        }
+
+        section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        #konten {
+            float: left;
+            width: 65%;
+        }
+
+        #sidebar {
+            float: right;
+            width: 30%;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        footer {
+            clear: both;
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 4px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f2fe;
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+
+        .frame {
+            width: 100%;
+            height: 200px;
+            border: 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Curriculum Vitae</h1>
+        <p>Fahriza Makkiyah Akbar</p>
+        <nav>
+            <a href="profile">
+                profile</a>
+            <a href="Pendidikan">
+                Pendidikan</a>
+            <a href="Kemampuan">
+                Kemampuan</a>
+            <a href="Contact">
+                Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="konten">
+            <section id="Profile">
+                <h2>Profile</h2>
+                <p>Nama saya
+                    <strong>Fahriza Makkiyah Akbar</strong>
+                    mahasiswa baru yang tertarik pada <em>web Development</em>
+                    saya sedang mempelajari HTML, CSS, dan Framework Laravel
+                </p>
+            </section>
+
+            <section id="Pendidikan">
+                <h2>Pendidikan</h2>
+                <P>
+                    <STRONG>SDIT PADI AT TAQWA</STRONG>
+                </P>
+                <P>
+                    <STRONG>SMPIT AL MUQORROBIN</STRONG>
+                </P>
+                <P>
+                    <STRONG>SMKN 1 CIBINONG</STRONG>
+                </P>
+                <section id="Kemampuan">
+                    <h2>Kemampuan</h2>
+                    <p>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Editing Vidio</span>
+                        <span class="tag">Voice Over</span>
+                    </p>
+                </section>
+                <section id-="Contact">
+                    <h2>Contact</h2>
+                    <p>
+                        Email :
+                        <a href="mailto:fahrizamakkiyahakbar@gmail.com">fahrizamakkiyahakbar@gmail.com</a>
+                    </p>
+                    <p>
+                        Instagram :
+                        <a href="https://www.instagram.com/fahriza_makkiyah_akbar/">@fahriza_makkiyah_akbar</a>
+                    </p>
+                    <p>
+                        pratinjau wikipedia :
+                    </p>
+                    <iframe class="frame" src="https://id.wikipedia.org/wiki/Fahriza_Makkiyah_Akbar"
+                        title="Wikipidia Fahriza Makkiyah Akbar"></iframe>
+                </section>
+        </div>
+
+        <div id="sidebar">
+            <h2>Tentang saya</h2>
+            <p>saya aslinya orang dua ✌️</p>
+        </div>
+    </main>
+
+    <footer>
+        © Fahriza Makkiyah Akbar - CV ini dibuat dengan html, CSS, Internal,
+        dan layout float
+    </footer>
+</body>
+
+</html>

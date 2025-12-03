@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order Form</title>
+ 
+  <style>
+    :root{
+      --bg: #f7f7f8;
+      --card-bg: #ffffff;
+      --muted: #7a7a7a;
+      --accent: #0400ff;
+      --radius: 16px;
+      --shadow: 0 8px 28px rgba(42, 220, 255, 0.08);
+      --input-border: #e2e2e4;
+      --green: #0a8f5a;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg), #fff);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:40px 20px;
+      color:var(--accent);
+    }
+
+    .container{
+      width:100%;
+      max-width:420px;
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px;
+      border:1px solid rgba(0,0,0,0.03);
+    }
+
+    h1{
+      margin:0 0 18px 0;
+      font-size:26px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+
+    .section-title{
+      margin:20px 0 10px;
+      font-weight:700;
+      font-size:18px;
+    }
+
+    label{
+      display:block;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .input, select, textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:6px;
+      border:1px solid var(--input-border);
+      font-size:14px;
+      outline:none;
+      background:#fff;
+      color:var(--accent);
+    }
+
+    .input::placeholder, textarea::placeholder{
+      color:#bdbdbd;
+    }
+
+    .row{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .col{
+      flex:1;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 120px;
+      gap:14px;
+      align-items:center;
+    }
+
+    .inline-field{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin:8px 0;
+    }
+
+    .field-group{
+      margin-bottom:6px;
+    }
+
+    .checkbox-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px 24px;
+      margin-top:8px;
+    }
+
+    .checkbox-item{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:500;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .checkbox-item input[type="checkbox"]{
+      width:16px;
+      height:16px;
+    }
+
+    textarea{
+      min-height:90px;
+      resize:vertical;
+    }
+
+    .select{
+      appearance:none;
+      background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+                        linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+                        linear-gradient(to right, #fff, #fff);
+      background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+      background-size: 6px 6px, 6px 6px, 2.5em 2.5em;
+      background-repeat: no-repeat;
+      padding-right:38px;
+    }
+
+    .muted{
+      color:var(--muted);
+      font-weight:600;
+      margin-bottom:6px;
+    }
+
+    .terms{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      padding:12px 24px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      margin-top:18px;
+      box-shadow:0 6px 12px rgba(17,17,17,0.08);
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="container" aria-labelledby="formTitle">
+    <h1 id="formTitle">Order Form</h1>
+
+    <div class="field-group">
+      <label for="name">Name</label>
+      <input id="name" class="input" type="text" placeholder="Clark" />
+    </div>
+
+    <div class="row" style="margin-top:8px;">
+      <div class="col">
+        <label for="email">Email</label>
+        <input id="email" class="input" type="email" placeholder="fhrzm.a@gmail.com" />
+      </div>
+      <div style="width:150px;">
+        <label for="phone">Phone</label>
+        <input id="phone" class="input" type="tel" placeholder="08453453" />
+      </div>
+    </div>
+    <div class="section-title">Order Details</div>
+
+    <div class="two-col">
+      <div>
+        <label for="product">Product</label>
+        <select id="product" class="input select" aria-label="Select a product">
+          <option value="">Select a product</option>
+          <option>Classic T-shirt</option>
+          <option>Premium Hoodie</option>
+          <option>Sticker Pack</option>
+        </select>
+      </div>
+      <div>
+        <label for="qty">Quantity</label>
+        <input id="qty" class="input" type="number" min="1" value="1" />
+      </div>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="muted">Size</div>
+      <div class="checkbox-grid">
+        <label class="checkbox-item"><input type="checkbox" name="size" value="S"> <span>Small</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="size" value="M"> <span>Medium</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="size" value="L"> <span>Large</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="size" value="XL"> <span>XL</span></label>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="muted">Color</div>
+      <div class="checkbox-grid">
+        <label class="checkbox-item"><input type="radio" name="color" value="Red"> <span>Red</span></label>
+        <label class="checkbox-item"><input type="radio" name="color" value="Blue"> <span>Blue</span></label>
+        <label class="checkbox-item"><input type="radio" name="color" value="Green"> <span>Green</span></label>
+        <label class="checkbox-item"><input type="radio" name="color" value="Black"> <span>Black</span></label>
+      </div>
+    </div>
+    <div style="margin-top:16px;">
+      <label for="notes">Additional Comments</label>
+      <textarea id="notes" placeholder="Enter any additional comments or instructions"></textarea>
+    </div>
+
+
+    <div class="section-title">Payment Details</div>
+    <div style="margin-bottom:8px;">
+      <label for="payment">Payment Method</label>
+      <select id="payment" class="input select">
+        <option value="">Select a payment method</option>
+        <option>Credit Card</option>
+        <option>Bank Transfer</option>
+        <option>PayPal</option>
+      </select>
+    </div>
+
+    <label class="terms">
+      <input type="checkbox" id="agree" /> <span>I accept the terms and conditions.</span>
+    </label>
+
+    <div style="text-align:center">
+      <button class="btn" type="button" onclick="submitForm()">Submit Order</button>
+    </div>
+  </main>
+</body>
+</html>

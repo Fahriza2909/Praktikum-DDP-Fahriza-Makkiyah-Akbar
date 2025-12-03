@@ -1,0 +1,22 @@
+import math
+
+def kubus(sisi):
+    hasil = math.pow(sisi, 3)
+    return hasil
+
+def balok(panjang, lebar, tinggi):
+    hasil = panjang * lebar * tinggi
+    return hasil
+
+def prisma(alas, tinggi,tinggi_prisma):
+    luas_alas = 0.5 * alas * tinggi
+    hasil = luas_alas * tinggi_prisma
+    return hasil
+
+def tabung(jari_jari, tinggi):
+    hasil = math.pi * math.pow(jari_jari, 2) * tinggi
+    return hasil
+
+def kerucut(jari_jari, tinggi):
+    hasil = (1/3) * math.pi * math.pow(jari_jari, 2) * tinggi
+    return hasil

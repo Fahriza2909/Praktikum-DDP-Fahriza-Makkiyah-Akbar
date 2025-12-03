@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Membership Registration Form</title>
+
+
+  <style>
+    :root{
+      --bg:#f4f6f8;
+      --card:#ffffff;
+      --muted:#9aa3ad;
+      --accent:#0bcaff;
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(12,20,30,0.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg), #ffffff 60%);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    /* Card container */
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      border:1px solid rgba(16,24,40,0.04);
+    }
+
+    h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+      font-weight:700;
+      letter-spacing: -0.2px;
+    }
+    .subtitle{
+      margin:0 0 20px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Form layout */
+    form { width:100%; }
+    .row {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    /* Single column rows */
+    .stack { margin-bottom:14px; }
+
+    label{
+      display:block;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .field{
+      width:100%;
+      padding:12px 14px;
+      border-radius:8px;
+      border:1px solid rgba(9,30,66,0.08);
+      background: #fbfdff;
+      font-size:14px;
+      color:#111827;
+      outline:none;
+      transition:box-shadow .12s, border-color .12s;
+    }
+    .field:focus{
+      box-shadow:0 0 0 4px rgba(11,116,255,0.08);
+      border-color:rgba(11,116,255,0.35);
+    }
+
+    textarea.field{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    /* Country select */
+    .select-wrapper{
+      position:relative;
+    }
+    .select-wrapper select.field{
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+      padding-right:42px;
+    }
+    .select-wrapper::after{
+      content: "▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--muted);
+      font-size:14px;
+      pointer-events:none;
+    }
+
+    /* Radios + checkboxes */
+    .inline-options{ display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+    .option{
+      display:flex; gap:8px; align-items:center; font-size:14px; color:#2b3440;
+    }
+    .option input[type="radio"], .option input[type="checkbox"]{
+      width:16px; height:16px;
+      accent-color: var(--accent);
+    }
+
+    .section-title { font-size:18px; font-weight:700; margin:18px 0 10px 0; }
+
+    /* Interests grid */
+    .two-cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px 36px;
+      align-items:start;
+    }
+
+    /* Terms area */
+    .terms{
+      display:flex; gap:10px; align-items:center; margin-top:12px;
+      color:#28323a;
+      font-size:14px;
+    }
+
+    /* Submit */
+    .submit-wrap { display:flex; justify-content:center; margin-top:18px; }
+    button[type="submit"]{
+      background: linear-gradient(180deg,var(--accent), #0068e6);
+      color:white;
+      padding:12px 28px;
+      border-radius:8px;
+      border:0;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow: 0 6px 14px rgba(11,116,255,0.18);
+      width:220px;
+    }
+    button[type="submit"]:active{ transform:translateY(1px) }
+
+  </style>
+</head>
+<body>
+
+  <main class="card" role="main">
+    <h1>Membership Registration Form</h1>
+    <p class="subtitle">Please fill out the form below to become a member.</p>
+
+    <form autocomplete="on" novalidate>
+
+      
+      <div class="row mb-12">
+        <div>
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" class="field" type="text" placeholder="Enter your first name" required>
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" class="field" type="text" placeholder="Enter your last name" required>
+        </div>
+      </div>
+
+      
+      <div class="row mb-12">
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" class="field" type="email" placeholder="Enter your email address" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" class="field" type="tel" placeholder="Enter your phone number">
+        </div>
+      </div>
+
+      
+      <div class="stack mb-12">
+        <label for="addr1">Address Line 1</label>
+        <input id="addr1" name="addr1" class="field" type="text" placeholder="Enter your address line 1">
+      </div>
+
+  
+      <div class="stack mb-12">
+        <label for="addr2">Address Line 2</label>
+        <input id="addr2" name="addr2" class="field" type="text" placeholder="Enter your address line 2">
+      </div>
+
+    
+      <div class="stack mb-12">
+        <label for="country">Country</label>
+        <div class="select-wrapper">
+          <select id="country" name="country" class="field" aria-label="Country">
+            <option>Jepang</option>
+            <option>Indonesia</option>
+            <option>Inggris</option>
+            <option>Australia</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+      </div>
+
+      
+      <div class="stack mb-12">
+        <label>Membership Type</label>
+        <div class="inline-options" role="radiogroup" aria-label="Membership Type">
+          <label class="option"><input type="radio" name="membership" value="basic" checked> Basic</label>
+          <label class="option"><input type="radio" name="membership" value="premium"> Premium</label>
+          <label class="option"><input type="radio" name="membership" value="elite"> Elite</label>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Interests</div>
+
+        <div class="stack">
+          <label>Favorite Sports</label>
+          <div class="two-cols mb-12">
+            <label class="option"><input type="checkbox" name="sports" value="football"> Football</label>
+            <label class="option"><input type="checkbox" name="sports" value="basketball"> Basketball</label>
+            <label class="option"><input type="checkbox" name="sports" value="baseball"> Baseball</label>
+            <label class="option"><input type="checkbox" name="sports" value="hockey"> Hockey</label>
+            <label class="option"><input type="checkbox" name="sports" value="soccer"> Soccer</label>
+            <label class="option"><input type="checkbox" name="sports" value="other"> Other</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why join (textarea) -->
+      <div class="stack mb-12">
+        <label for="why">Why do you want to become a member?</label>
+        <textarea id="why" name="why" class="field" placeholder="Please tell us why you want to join"></textarea>
+      </div>
+
+      <!-- Terms -->
+      <div class="terms">
+        <input id="terms" type="checkbox" required>
+        <label for="terms" style="margin:0; font-weight:500;">I agree to the terms and conditions.</label>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-wrap">
+        <button type="submit">Submit Registration</button>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+</html>

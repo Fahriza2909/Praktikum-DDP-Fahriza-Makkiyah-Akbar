@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Registration Form</title>
+
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#fff;
+      --muted:#8a8f98;
+      --accent:#0281ff;
+      --border:#e6e9ee;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);
+    }
+    .card{
+      width:380px;
+      background:var(--card);
+      border-radius:16px;
+      padding:28px;
+      box-shadow:0 6px 18px rgba(22,28,37,0.08);
+      border:1px solid var(--border);
+    }
+    h1{font-size:22px;margin:0 0 6px 0}
+    p.lead{color:var(--muted);font-size:13px;margin:0 0 18px}
+
+    form .row{display:flex;gap:12px}
+    label{display:block;font-weight:600;font-size:13px;margin-bottom:8px}
+    input[type=text], input[type=email], input[type=tel], input[type=date], select{
+      width:100%;padding:12px 14px;border-radius:6px;border:1px solid var(--border);background:#fff;font-size:14px;color:#111
+    }
+    .field{margin-bottom:16px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    /* T-Shirt checkboxes */
+    .checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+    .checkbox-item{display:flex;align-items:center;gap:8px}
+    .checkbox-item input{width:16px;height:16px}
+    .section-title{font-size:18px;font-weight:700;margin:18px 0 12px}
+
+    .terms{display:flex;align-items:flex-start;gap:10px;margin-top:8px}
+    .btn{display:inline-block;background:var(--accent);color:white;padding:10px 18px;border-radius:8px;border:none;font-weight:600;cursor:pointer}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Event Registration Form</h1>
+    <p class="lead">Please fill out the form below to register for the event.</p>
+
+    <form id="regForm" autocomplete="off">
+      <div class="two-col">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" type="text" placeholder="Clark" />
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" type="text" placeholder="Kent" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="fhrz.ma@gmail.com" />
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="08635256323" />
+      </div>
+
+      <div class="two-col">
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option>Inggris</option>
+            <option>Indonesia</option>
+            <option>German</option>
+            <option>Korea</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>T-Shirt Size</label>
+        <div class="checkbox-grid">
+          <label class="checkbox-item"><input type="checkbox" name="size" value="S"/> Small</label>
+          <label class="checkbox-item"><input type="checkbox" name="size" value="M"/> Medium</label>
+          <label class="checkbox-item"><input type="checkbox" name="size" value="L"/> Large</label>
+          <label class="checkbox-item"><input type="checkbox" name="size" value="XL"/> Extra Large</label>
+        </div>
+      </div>
+
+      <div class="section-title">Emergency Contact Information</div>
+
+      <div class="field">
+        <label for="ecName">Emergency Contact Name</label>
+        <input id="ecName" name="ecName" type="text" placeholder="Batman" />
+      </div>
+
+      <div class="field">
+        <label for="ecPhone">Emergency Contact Phone Number</label>
+        <input id="ecPhone" name="ecPhone" type="tel" placeholder="08736243612" />
+      </div>
+
+      <div class="field terms">
+        <input id="agree" type="checkbox" />
+        <label for="agree" class="muted">I agree to the terms and conditions of this event.</label>
+      </div>
+
+      <div style="display:flex;justify-content:center;margin-top:14px">
+        <button type="submit" class="btn">Register Now</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
